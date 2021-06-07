@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from 'react';
+import Card from '../components/Card'
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const url = 'https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg',
+  title='Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops',
+  price=109.95,
+  stars=[true,true,true,false,false]
+  return ( <div>
+    <Card   imgURL= {url}
+            productName={title}
+            price={price}
+            stars={stars} />
+  </div> );
 }
 
 export default App;
